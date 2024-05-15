@@ -6,6 +6,12 @@
 @tailwind components;
 @tailwind utilities;
 
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px white inset; /* Change the color to match your app's design */
+  -webkit-text-fill-color: #333; /* Change the text color if necessary */
+}
+
 @layer base {
   * {
     @apply focus:outline-none;
@@ -39,7 +45,9 @@
       @apply inline;
     }
   }
+
 }
+
 
 // Partials
 @import 'partials/reset';

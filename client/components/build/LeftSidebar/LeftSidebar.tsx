@@ -111,11 +111,11 @@ const LeftSidebar = () => {
       <div className={styles.container}>
         <nav className="overflow-y-auto">
           <div>
-            <Link href="/dashboard">
+            {/* <Link href="/dashboard">
               <IconButton>
                 <Icon size={24} />
               </IconButton>
-            </Link>
+            </Link> */}
             <Divider />
           </div>
 

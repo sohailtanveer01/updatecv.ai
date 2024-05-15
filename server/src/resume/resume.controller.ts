@@ -29,6 +29,8 @@ export class ResumeController {
   @UseGuards(JwtAuthGuard)
   @Post()
   create(@Body() createResumeDto: CreateResumeDto, @User('id') userId: number) {
+    console.log(userId, "im in create res controller")
+    console.log("these are params",createResumeDto)
     return this.resumeService.create(createResumeDto, userId);
   }
 

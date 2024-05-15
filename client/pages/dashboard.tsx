@@ -75,7 +75,7 @@ const Dashboard: NextPage = () => {
   const hasSessionId = router.query?.session_id !== undefined;
 
   const count: any = useAppSelector(((state) => state.auth.user))
-  const updatedCount: number = count.count;
+  // const updatedCount: number = count.count;
   const isSubscriberredux = useAppSelector((state)=>state.auth.user?.isSubscriber)
 
   const handleupgradeClick = () => {
@@ -95,9 +95,9 @@ const Dashboard: NextPage = () => {
   }, []);
   const checkuser = async () => {
     const id: number = user.id
-    const apiUrl: string = process.env.PUBLIC_SERVER_URL!;
+    const apiUrl: string = process.env.NEXT_PUBLIC_API_URL!;
 
-    const checkURL = 'api/auth/knowcustomer';
+    const checkURL = `${apiUrl}/auth/knowcustomer`;
     const isSubscriber: any = await axios.post(checkURL, { id })
     //  const tokenresstr = String(tokenres.data)
     //  console.log(tokenresstr)
