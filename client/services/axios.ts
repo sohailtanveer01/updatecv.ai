@@ -15,7 +15,7 @@ export type ServerError = {
 };
 
 // const baseURL = 'http://localhost:3100'
-const baseURL = 'https://updatecv-ai.vercel.app:3100';
+const baseURL = 'https://updatecv-ai.vercel.app';
 // console.log({baseURL})
 const axios = _axios.create({ baseURL });
 
